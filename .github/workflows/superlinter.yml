@@ -2,15 +2,20 @@ name: Super-Linter
 
 on: push
 
+permissions:
+  contents: read
+
 jobs:
   super-lint:
     name: Lint code base
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+          persist-credentials: false
 
       - name: Run Super-Linter
         uses: super-linter/super-linter@v8.7.0
