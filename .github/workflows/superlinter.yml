@@ -12,13 +12,13 @@ jobs:
 
     steps:
       - name: Checkout code
-        uses: actions/checkout@v4
+        uses: actions/checkout@8f4b7f84864484a7bf31766abe9204da3cbe65b3 # v4.3.1
         with:
           fetch-depth: 0
           persist-credentials: false
 
       - name: Run Super-Linter
-        uses: super-linter/super-linter@v8.7.0
+        uses: super-linter/super-linter@4ce20838b8ab83717e78138c5b3a1407148e0918 # v8.7.0
         env:
           DEFAULT_BRANCH: master
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
